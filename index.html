@@ -17,31 +17,32 @@
 	}
 	
 	.image {
-		width: 50%;
+        height: 25%;
+		width: 25%;
 		margin: 0 auto;
 	}
+    body {background-color: black;
+           color: white;}
+
 	</style>
+
+    <p class="above-text">This is a randomly selected glamour shot of the one and only Captain Reg:</p>
+    <div class="image-container">
 
     <script type="text/javascript">
         // Array of image file names
         var imageArray = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image5.jpeg", "image6.jpeg","image7.jpeg", "image8.jpeg", "image9.jpeg", "image10.jpeg", "image11.jpeg", "image12.jpeg"];
         // Randomly select an image from the array
         var selectedImage = imageArray[Math.floor(Math.random()*imageArray.length)];
-
-        // Create a wrapper element for the text and image
-        document.write('<div class="image-container">');
-
-        // Add the text above the image
-        document.write('<p class="above-text">This is a randomly selected glamour shot of the one and only Captain Reg:</p>');
-
         // display randomly selected image
             document.write('<img src="' + selectedImage + '" alt="Random Image" class="image">');        
-        // Add the text below the image
-        document.write('<p class="below-text"> If you want a cool account header download the Reggiestration header <br />' +
-			'<img src="reggiestration.jpg" class="image">');			
         // Close the wrapper element
-        document.write('</div>');
     </script>
+    </div>
+    
+    <p class="below-text"> If you want a cool account header download the Reggiestration header <br />
+	<img src="reggiestration.jpg"> <br/><br/>
+
 	<a href="https://www.cvent.com">Cvent</a>
 </body>
 </html>
