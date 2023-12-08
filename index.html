@@ -1,22 +1,47 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-	<title>Reggiestration</title>  
-</head>  
-<body>  
-	<script type="text/javascript">  
-		// Array of image file names  
-		var imageArray = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image5.jpeg", "image6.jpeg","image7.jpeg", "image8.jpeg", "image9.jpeg", "image10.jpeg", "image11.jpeg"];  
-  
-		// Randomly select an image from the array  
-		var selectedImage = imageArray[Math.floor(Math.random()*imageArray.length)];  
-  
-		// Redirect to URL or display randomly selected image  
-		if (Math.random() < 0.2) {  
-			window.location.href = "http://www.cvent.com";  
-		} else {  
-			document.write("<img src='" + selectedImage + "' alt='Random Image'>");  
-		}  
-	</script>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reggiestration</title>
+</head>
+<body>
+
+
+<style>
+	.image-container {
+		text-align: center;
+	}
+	
+	.above-text, .below-text {
+		font-size: 16px;
+		font-weight: bold;
+	}
+	
+	.image {
+		width: 50%;
+		margin: 0 auto;
+	}
+	</style>
+
+    <script type="text/javascript">
+        // Array of image file names
+        var imageArray = ["image1.jpeg", "image2.jpeg", "image3.jpeg", "image5.jpeg", "image6.jpeg","image7.jpeg", "image8.jpeg", "image9.jpeg", "image10.jpeg", "image11.jpeg", "image12.jpeg"];
+        // Randomly select an image from the array
+        var selectedImage = imageArray[Math.floor(Math.random()*imageArray.length)];
+
+        // Create a wrapper element for the text and image
+        document.write('<div class="image-container">');
+
+        // Add the text above the image
+        document.write('<p class="above-text">This is a randomly selected glamour shot of the one and only Captain Reg:</p>');
+
+        // display randomly selected image
+            document.write('<img src="' + selectedImage + '" alt="Random Image" class="image">');        
+        // Add the text below the image
+        document.write('<p class="below-text"> If you want a cool account header download the Reggiestration header <br />' +
+			'<img src="reggiestration.jpg" class="image">');			
+        // Close the wrapper element
+        document.write('</div>');
+    </script>
+	<a href="https://www.cvent.com">Cvent</a>
+</body>
+</html>
